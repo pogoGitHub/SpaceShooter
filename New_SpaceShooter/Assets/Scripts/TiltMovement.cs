@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TiltMovement : MonoBehaviour 
 {
-	public float movementSpeed = 10;
+	public float movementSpeed = 5;
 	public Boundary boundary;
 	
 	void Update () {
