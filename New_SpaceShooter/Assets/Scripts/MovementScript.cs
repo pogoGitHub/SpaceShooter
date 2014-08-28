@@ -1,33 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[System.Serializable]
-public class Boundary // values for setting scale of boundary
-{
-	public float xMin, xMax, yMin, yMax;
-}
-
 public class MovementScript : MonoBehaviour
 {
 	public float speed;
 	public Boundary boundary;
 
-	public GameObject shot;
-	public Transform shotSpawn;
-	public float fireRate;
-
-	private float nextFire;
-
-	void Update()
-	{
-		if (Time.time > nextFire)
-		{
-			nextFire = Time.time + fireRate;
-			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-		}
-	}
-	
-	
 	void FixedUpdate ()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
